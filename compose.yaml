@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: job-engine-postgres
+    environment:
+      POSTGRES_DB: job_engine
+      POSTGRES_USER: job_engine_user
+      POSTGRES_PASSWORD: job_engine_dev_only
+    ports:
+      - "5433:5432"
+    volumes:
+      - job_engine_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U job_engine_user -d job_engine"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  job_engine_data:
