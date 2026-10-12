@@ -19,8 +19,9 @@ Java 21, Spring Boot, PostgreSQL, and Java concurrency.
 - Java 21
 - Spring Boot
 - PostgreSQL
-- Spring JDBC
+- Spring JDBC / Spring Data JPA (Hibernate)
 - Flyway
+- Springdoc OpenAPI (Swagger UI)
 - Docker Compose
 - JUnit and Testcontainers
 
@@ -47,6 +48,11 @@ On Windows PowerShell:
 Check application health:
 
     http://localhost:8080/actuator/health
+
+API documentation (Springdoc OpenAPI):
+
+    http://localhost:8080/swagger-ui/index.html
+    http://localhost:8080/v3/api-docs
 
 ## Development status
 
