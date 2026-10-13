@@ -59,7 +59,7 @@ API documentation (Springdoc OpenAPI):
 - [x] Initial project setup
 - [x] PostgreSQL container configuration
 - [x] Initial database migration
-- [ ] Job submission API
+- [x] Job submission and management API (CRUD + pagination)
 - [ ] Job executor registry
 - [ ] Configurable polling and dispatch
 - [ ] Tenant-aware parallel execution
